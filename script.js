@@ -62,26 +62,21 @@ function operate(operator, a, b) {
     }
 }
 
-console.log(operate("*", 2, 3));
-
-
-
-let firstNumber = [];
-let secondNumber = [];
-let result = 0;
-let operator = "";
-let counter = 0;
-let dotCounter = 0;
 
 function displayOnScreen() {
 
+    let firstNumber = [];
+    let secondNumber = [];
+    let result = 0;
+    let operator = "";
+    let counter = 0;
+    let dotCounter = 0;
     // selecting every html tag that will usable on the calculator function
     const screen = document.querySelector('.screen');
     const numberButtons = document.querySelectorAll('.number-wrapper > button');
     screen.innerText = "0";
     const buttonClear = document.querySelector('#button-clear');
     const buttonDelete = document.querySelector('#button-delete');
-
 
     // function to clear the screen when click on the clear button
     buttonClear.addEventListener('click', (e) => {
@@ -160,7 +155,6 @@ function displayOnScreen() {
                 
                 if (counter >= 1) {
 
-
                         firstNumber = [result];
                         result =  operate(operator, +firstNumber.join(""), +secondNumber.join(""));
                         screen.innerText = result; 
@@ -188,10 +182,7 @@ function displayOnScreen() {
    });
 
 }
-
 displayOnScreen();
-
-
 
 
 function updateClocks() {
@@ -207,7 +198,6 @@ function updateClocks() {
     clock.textContent = time;
   }
 }
-
 // Update every minute:
 setInterval(updateClocks, 60000);
 updateClocks();
