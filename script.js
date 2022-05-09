@@ -192,10 +192,11 @@ function displayOnScreen() {
 displayOnScreen();
 
 
-// International timezone 
-const clocks = document.getElementsByClassName("clock");
+
 
 function updateClocks() {
+    // international timezone
+  const clocks = document.getElementsByClassName("clock");
   for (let clock of clocks) {
     let timezone = clock.dataset.timezone;
     let time = new Date().toLocaleTimeString("en-US", {
