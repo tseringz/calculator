@@ -45,6 +45,14 @@ time, mark, audio, video {
 
 }
 
+*, *::after, *::before {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
 body {
 
     margin: 0;
@@ -55,10 +63,10 @@ body {
 #bgvideo {
 
     position: fixed;
-    right: 0;
-    bottom: 0;
     width: 100vw;
     height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 
 }
 
@@ -172,7 +180,7 @@ h5 {
 .clock {
 
     color: whitesmoke;
-    padding: 5px;
+    padding-bottom: 10px;
     font-size: 13px;
 
  }
@@ -196,12 +204,6 @@ h5 {
 
  }
 
- .clock {
-
-   width: 70px; 
-
- }
- 
  .divider {
 
     width: 100px;
