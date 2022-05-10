@@ -1,5 +1,4 @@
 // build my on fuction to evaluate expression 
-
 function add (a, b) {
 
     return  a + b;
@@ -79,7 +78,7 @@ function displayOnScreen() {
     const buttonDelete = document.querySelector('#button-delete');
 
     // function to clear the screen when click on the clear button
-    buttonClear.addEventListener('click', (e) => {
+    buttonClear.addEventListener('click', () => {
 
         firstNumber = [];
         secondNumber = [];
@@ -174,7 +173,7 @@ function displayOnScreen() {
    
     const numberDelete =  screen.innerText.split('');
                       numberDelete.pop();
-                      screen.innerText = numberDelete.join("");
+                      (numberDelete.length === 0) ? screen.innerText = "0" : screen.innerText = numberDelete.join("");
                       firstNumber = numberDelete;
                       result = numberDelete.join("");
                       console.log(numberDelete);
