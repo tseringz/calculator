@@ -1,37 +1,27 @@
 // build my on fuction to evaluate expression 
 function add (a, b) {
-
     return  a + b;
-
 }
 
 function subtract(a, b) {
-
     return a - b;
 }
 
 function multiply(a, b) {
-
     return  a * b;
 }
 
 function divide(a, b) {
-
     if ( b === 0 ) {
-
-        return "Hi Dump!";
-        
+        return "Hi Dump!"; 
     }
 
     let num = a / b;
-
     if (Number.isInteger(num)) {
-
         return num;
     }
 
     else {
-
     return num.toFixed(3);
  }
     
@@ -70,33 +60,29 @@ function displayOnScreen() {
     let operator = "";
     let counter = 0;
     let dotCounter = 0;
-    // selecting every html tag that will usable on the calculator function
+    // selecting every html tag that will use on the calculator function
     const screen = document.querySelector('.screen');
     const numberButtons = document.querySelectorAll('.number-wrapper > button');
     screen.innerText = "0";
     const buttonClear = document.querySelector('#button-clear');
     const buttonDelete = document.querySelector('#button-delete');
 
-    // function to clear the screen when click on the clear button
+    // function to clear the screen 
     buttonClear.addEventListener('click', () => {
-
         firstNumber = [];
         secondNumber = [];
         result = 0;
         operator = "";
         counter = 0;
         screen.innerText = "0";
-
     });
 
 
     // walk through each butttons on the calculator accept clear and delete button
     numberButtons.forEach( element => {
          element.addEventListener('click', (e) => {
-
             if (e.target.value !== '+' && e.target.value !== '-' && e.target.value !== '=' &&
               e.target.value !== "*" && e.target.value !== '/') {
-
                  if (counter <= 0) {
 
                   firstNumber.push(e.target.value);
@@ -107,16 +93,12 @@ function displayOnScreen() {
                             firstNumber.pop();
                         }
                   }
-
                          screen.innerText = firstNumber.join("");
-
                    }
 
                   if(counter >= 1) {
-                    
                    secondNumber.push(e.target.value);
                    screen.innerText = +secondNumber.join("");
-
                     }
 
         }
@@ -125,41 +107,32 @@ function displayOnScreen() {
             || e.target.value === "=" || e.target.value === "*") {
 
                 if (counter <= 0) {
-
                     if (e.target.value === '*' || e.target.value === '/') {
-
                         operator = e.target.value; 
                         secondNumber = [1];
                         result =  operate(operator, +firstNumber.join(""), +secondNumber.join(""));
                         screen.innerText = result; 
                         counter++;
-
                     }
                 
                     else if (e.target.value === "=") {
-
                         result = 0;
-                        
                     } 
 
                     else {
-
                         operator = e.target.value; 
                         result =  operate(operator, +firstNumber.join(""), +secondNumber.join(""));
                         screen.innerText = result; 
                         counter++;
-
                     }
                 }
                 
                 if (counter >= 1) {
-
                         firstNumber = [result];
                         result =  operate(operator, +firstNumber.join(""), +secondNumber.join(""));
                         screen.innerText = result; 
                         operator = e.target.value;
                         secondNumber = [];
-
                }
          }
            
@@ -170,14 +143,23 @@ function displayOnScreen() {
 
    // Function to delete the numbers when they click the delete button
     buttonDelete.addEventListener('click', (e) => {
-   
     const numberDelete =  screen.innerText.split('');
-                      numberDelete.pop();
-                      (numberDelete.length === 0) ? screen.innerText = "0" : screen.innerText = numberDelete.join("");
-                      firstNumber = numberDelete;
-                      result = numberDelete.join("");
-                      console.log(numberDelete);
 
+                          if (numberDelete.length > 1) {
+                            numberDelete.pop();
+                            screen.innerText = numberDelete.join("");
+                            firstNumber = numberDelete;
+                            result = numberDelete.join("");
+
+                          } else {
+                            firstNumber = [];
+                            secondNumber = [];
+                            result = 0;
+                            operator = "";
+                            counter = 0;
+                            screen.innerText = '0';
+                          }
+                          
    });
 
 }
