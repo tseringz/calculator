@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../calculator/style.css">
-</head>
-<body>
-    <video autoplay muted loop id = "bgvideo">
-        <source src="../calculator/assets/calculator-background copy.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
+    <link rel="stylesheet" href="../calculator/style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="bgvideo">
+      <source
+        src="../calculator/assets/calculator-background copy.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support HTML5 video.
     </video>
     <section class="main-container">
-        <div class="contain-wrapper">
-            <div class="overlay">
+      <div class="contain-wrapper">
+        <div class="overlay">
+          <div class="screen-wrapper">
+            <div id="screen">0</div>
+          </div>
 
-                <div class="screen-wrapper">
-                    <div class="screen"></div>
-                </div>
+          <div class="main-button">
+            <button id="button-clear">CLR</button>
+            <button id="button-delete">DEL</button>
+          </div>
 
-                <div class="main-button">
-                    <button id="button-clear">CLR</button>
-                    <button id="button-delete">DEL</button>
-                </div>
+          <div class="number-wrapper">
+            <button id="number" type="button" value="7">7</button
+            ><button id="number" type="button" value="8">8</button>
+            <button id="number" type="button" value="9">9</button
+            ><button id="operator" type="button" value="/">/</button> <br />
+            <button id="number" type="button" value="4">4</button
+            ><button id="number" type="button" value="5">5</button>
+            <button id="number" type="button" value="6">6</button
+            ><button id="operator" type="button" value="*">*</button> <br />
+            <button id="number" type="button" value="1">1</button>
+            <button id="number" type="button" value="2">2</button>
+            <button id="number" type="button" value="3">3</button
+            ><button id="operator" type="button" value="-">-</button> <br />
+            <button id="operator" type="button" value=".">.</button
+            ><button id="number" type="button" value="0">0</button>
+            <button id="operator" type="button" value="=">=</button>
+            <button id="operator" type="button" value="+">+</button> <br />
+          </div>
 
-                <div class="number-wrapper">
-                    <button id = "number" type = "button" value = "7">7</button><button id = "number" type = "button" value = "8">8</button>
-                    <button id = "number" type = "button" value = "9">9</button><button id = "operator" type = "button" value = "/">/</button> <br>
-                    <button id = "number" type = "button" value = "4">4</button><button id = "number" type = "button" value = "5">5</button>
-                    <button id = "number" type = "button" value = "6">6</button><button id = "operator" type = "button" value = "*">*</button> <br>
-                    <button id = "number" type = "button" value = "1">1</button> <button id = "number" type = "button" value = "2">2</button>
-                    <button id = "number" type = "button" value = "3">3</button><button id = "operator" type = "button" value = "-">-</button> <br>
-                    <button id = "number" type = "button" value = ".">.</button><button id = "number" type = "button" value = "0">0</button>
-                    <button id = "operator" type = "button" value = "=">=</button>
-                    <button id = "operator" type="button" value = "+">+</button> <br>
-                </div>
-            
-        <!-- world clock section -->
+          <!-- world clock section -->
 
-                <div class="clock-wrapper">
-                    <div class = "clock-item"><span class = "clock" data-timezone = "America/New_York"></span><div class="divider"></div><h5>New York</h5></div>
-                    <div class = "clock-item"><span class = "clock" data-timezone = "Europe/London"></span><div class="divider"></div><h5>London</h5></div>
-                    <div class = "clock-item"><span class = "clock" data-timezone = "Asia/Tokyo"></span><div class="divider"></div><h5>Tokyo</h5></div>
-                </div>
+          <div class="clock-wrapper">
+            <div class="clock-item">
+              <span class="clock" data-timezone="America/New_York"></span>
+              <div class="divider"></div>
+              <h5>New York</h5>
             </div>
-        
+            <div class="clock-item">
+              <span class="clock" data-timezone="Europe/London"></span>
+              <div class="divider"></div>
+              <h5>London</h5>
+            </div>
+            <div class="clock-item">
+              <span class="clock" data-timezone="Asia/Tokyo"></span>
+              <div class="divider"></div>
+              <h5>Tokyo</h5>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <script src="../calculator/script.js" defer></script>
-</body>
+    <table>
+      <tr>
+        <th>First Head</th>
+        <td>Second Raw</td>
+      </tr>
+    </table>
+    <script src="./script.js" defer></script>
+  </body>
 </html>

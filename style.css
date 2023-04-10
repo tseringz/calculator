@@ -147,7 +147,7 @@ h5 {
 
 }
 
-.screen {
+#screen {
 
     display: flex;
     justify-content: flex-end;
