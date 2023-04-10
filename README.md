@@ -7,9 +7,9 @@ Implematation of Calculator game from The Odin Project [curriculum](https://www.
 * JS
 
 ## What I Learned
-Learned to identify sub-tasks wihtin a function and turned them into seperate funcitons
-Improved my understanding of function usage in the project
-Better knowledge of maintaining clean code
+* Learned to identify sub-tasks wihtin a function and turned them into seperate funcitons
+* Improved my understanding of function usage in the project
+* Better knowledge of maintaining clean code
 
 ## Link
 [Live Demo of the Calculator](https://tseringz.github.io/calculator/)
